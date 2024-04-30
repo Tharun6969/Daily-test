@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="king">
+        <div id="box" >
+
+
+        </div>
+        <div >
+        <p id="p1"><b> Count:0</b></p>
+        </div>  
+        
+        <div class="flex">
+            <button class="b1" id="b1" onclick="update()">Click</button>
+            <button class="b1" id="b2" onclick="reset()">Reset</button>
+            <button class="b1" id="b3" onclick="red1()">Red</button>
+            <button class="b1" id="b4" occlick="change()">Blue</button>
+        </div>
+    </div>    
+    <style>
+        .flex{
+            display: flex;
+            gap: 30px;
+           
+            
+        }
+        .b1{
+            height: 50px;
+            width: 70px;
+            border-radius: 20px;
+        }
+        .b1:hover{
+            background-color: gray;
+        }
+        .b1:active{
+            background-color: rgb(186, 183, 183);
+        }
+        #p1{
+           
+        }
+        #box{
+            height: 100px;
+            width: 250px;
+            background-color: black;
+        }
+        .king{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 250px;
+        }
+    </style>
+    <script>
+        var a=0
+        var p1=document.getElementById("p1")
+        var red1=document.getElementById("red1")
+        var blue1=document.getElementById("blue1")
+        function reset(){
+            var b2=document.getElementById("b2")
+           
+            a=0
+            p1.textContent="Count :"+a
+        }
+     
+        
+        function update(){
+            p1.textContent="Count :"+(a++)
+            var b1=document.getElementById("b1")
+            var box=document.getElementById("box")
+            
+            if(a %2 !=0){
+                box.style.width='250px'
+                box.style.height='100px'
+                box.style.borderRadius = '0%';
+                
+                
+            }
+            if(a%2==0){
+                box.style.width='100px'
+                box.style.height='100px'
+                box.style.borderRadius = '0%';
+
+            }
+            if(a %5==0){
+                box.style.width='100px'
+                box.style.height='100px'
+                box.style.borderRadius = '50%';
+
+                box.style.background("black")
+
+            }
+           
+           
+            
+            
+
+           
+
+        }
+        function red1(){
+          
+            var box=document.getElementById("box")
+            box.style.background("red")
+        }
+        function change(){
+            var box=document.getElementById("box")
+            box.style.background("blue")
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
