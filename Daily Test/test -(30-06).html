@@ -19,7 +19,7 @@
             <button class="b1" id="b1" onclick="update()">Click</button>
             <button class="b1" id="b2" onclick="reset()">Reset</button>
             <button class="b1" id="b3" onclick="red1()">Red</button>
-            <button class="b1" id="b4" occlick="change()">Blue</button>
+            <button class="b1" id="b4" onclick="change()">Blue</button>
         </div>
     </div>    
     <style>
@@ -58,20 +58,20 @@
     <script>
         var a=0
         var p1=document.getElementById("p1")
-        var red1=document.getElementById("red1")
-        var blue1=document.getElementById("blue1")
+        var box=document.getElementById("box")
         function reset(){
             var b2=document.getElementById("b2")
            
             a=0
             p1.textContent="Count :"+a
+            box.style.backgroundColor='black';
         }
      
         
         function update(){
-            p1.textContent="Count :"+(a++)
+            p1.textContent="Count :"+(++a)
             var b1=document.getElementById("b1")
-            var box=document.getElementById("box")
+           
             
             if(a %2 !=0){
                 box.style.width='250px'
@@ -91,35 +91,18 @@
                 box.style.height='100px'
                 box.style.borderRadius = '50%';
 
-                box.style.background("black")
+               
 
             }
-           
-           
-            
-            
-
-           
-
         }
         function red1(){
           
-            var box=document.getElementById("box")
-            box.style.background("red")
+            box.style.backgroundColor = 'red';
         }
         function change(){
-            var box=document.getElementById("box")
-            box.style.background("blue")
+           
+            box.style.backgroundColor='blue';
         }
-
-
-
-
-
-
-
-
-
     </script>
 </body>
 </html>
